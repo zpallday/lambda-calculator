@@ -1,9 +1,10 @@
 import React from "react";
 
-const Display = (props) => {
-  return <div className="display">
-    {props.number}
-  </div>;
+const Display = numbers => {
+  return (
+    <div className="display">{numbers.display === "" ? "0" : numbers.display}
+    </div>
+  );
 };
 
 export default Display;

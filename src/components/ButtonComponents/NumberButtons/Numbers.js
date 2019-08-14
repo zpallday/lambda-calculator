@@ -4,15 +4,16 @@ import React, {useState} from "react";
 import NumberButton from "./NumberButton";
 //Import your array data to from the provided data file
 import {numbers} from "../../../data.js";
-const Numbers = () => {
+const Numbers = prop => {
   // STEP 2 - add the imported data to state
   const[numsArray,setNumsArray] = useState(numbers);
   console.log('numbers', {numsArray})
   return (
-    <div>
-    {numsArray.map((number, i) =>
-      <NumberButton key={i} number={number} />
-      )}
+    <div className="numbers-container">
+      {numsArray.map(number => (
+        <NumberButton key = {number} number={number} handleInput = {prop.handleInput}
+      />
+      ))}
   </div>
 );
 };

@@ -1,10 +1,19 @@
 import React from "react";
 
-const NumberButton = ({number}) => {
+
+
+
+const NumberButton = numbers => {
   return (
-    <button>
-      {number}
+    <>
+    {
+    <button className="number-button"
+    onClick={() => numbers.handleInput(numbers.number)}
+    >
+      {numbers.number}
     </button>
+    }
+    </>
   );
 };
 export default NumberButton;

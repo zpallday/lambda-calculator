@@ -1,10 +1,18 @@
 import React from "react";
 
-const OperatorButton = () => {
+const OperatorButton = numbers => {
   return (
-    <button>
-      {OperatorButton.char}
-    </button>
+    <>
+      {
+        <button
+          className="operator-button"
+          onClick={() => numbers.handleInput(numbers.operator)}
+        >
+          {numbers.char}
+        </button>
+      }
+    </>
   );
 };
-export default OperatorButton
+
+export default OperatorButton;
